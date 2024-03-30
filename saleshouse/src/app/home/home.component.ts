@@ -7,14 +7,14 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProductComponent],
+  imports: [ProductComponent, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   constructor( private productsService: ProductsService) { }
 
-  products: Products[] = [];
+
 
   ngOnInit() {
 
