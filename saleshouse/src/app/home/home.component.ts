@@ -14,11 +14,11 @@ import { CommonModule } from '@angular/common';
 export class HomeComponent {
   constructor( private productsService: ProductsService) { }
 
-
+  products: Products[] = [];
 
   ngOnInit() {
 
-    this.productsService.getProducts('http://localhost:3000/clothes', { page: 0, perPager: 5 })
+    this.productsService.getProducts('http://localhost:3000/clothes', { page: 0, perPage: 5 })
       .subscribe((products: Products) => {
         this.products = products.items;
       });
