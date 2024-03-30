@@ -1,5 +1,6 @@
 import { HttpContext, HttpHeaders, HttpParams } from "@angular/common/http";
 
+
 export interface Options {
     headers?: HttpHeaders | {
         [header: string]: string | string[];
@@ -18,7 +19,7 @@ export interface Options {
 }
 
 export interface Products {
-    items: Product[];
+    items: Products[];
     total: number;
     page: number;
     perPage: number;
